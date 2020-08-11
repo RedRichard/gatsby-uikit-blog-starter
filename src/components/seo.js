@@ -83,6 +83,9 @@ function SEO({ description, lang, meta, title }) {
           src:
             "https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js",
         },
+        {
+          src: "https://identity.netlify.com/v1/netlify-identity-widget.js",
+        },
       ]}
     />
   )
