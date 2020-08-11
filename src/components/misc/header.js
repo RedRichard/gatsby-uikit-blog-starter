@@ -15,7 +15,7 @@ const Header = () => (
         </ul>
 
         <ul className="uk-navbar-nav">
-          <StaticQuery
+          {/* <StaticQuery
             query={graphql`
               query {
                 allStrapiCategory {
@@ -38,7 +38,7 @@ const Header = () => (
                 )
               })
             }
-          />
+          /> */}
         </ul>
       </div>
     </nav>

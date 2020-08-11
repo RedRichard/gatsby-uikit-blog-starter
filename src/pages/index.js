@@ -11,7 +11,12 @@ import Banner from "../images/main-banner.png"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <StaticQuery
+    <div className="uk-section uk-section-default uk-padding-remove-top">
+      <div className="uk-container uk-container-large uk-padding-remove-left uk-padding-remove-right">
+        <img src={Banner} alt="Letras Transformadoras"></img>
+      </div>
+    </div>
+    {/* <StaticQuery
       query={graphql`
         query {
           allStrapiArticle(filter: { category: { text: { eq: 1 } } }) {
@@ -43,7 +48,7 @@ const IndexPage = () => (
           </div>
         </>
       )}
-    />
+    /> */}
   </Layout>
 )
 
