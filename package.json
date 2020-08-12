@@ -15,6 +15,7 @@
     "gatsby-source-filesystem": "^2.3.23",
     "gatsby-source-strapi": "^0.0.12",
     "gatsby-transformer-sharp": "^2.5.12",
+    "netlify-cms": "^2.10.55",
     "netlify-cms-app": "^2.12.19",
     "netlify-identity-widget": "^1.9.1",
     "prop-types": "^15.7.2",
