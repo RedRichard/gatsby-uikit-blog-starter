@@ -2,7 +2,7 @@ import React from "react"
 
 import Card from "../cards/frontPageCard"
 
-const textList = ({ articles }) => {
+const articleList = ({ articles }) => {
   return (
     <div
       className="uk-grid-match uk-grid-column-medium uk-grid-row-medium uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center"
@@ -17,4 +17,4 @@ const textList = ({ articles }) => {
   )
 }
 
-export default textList
+export default articleList

@@ -1,17 +1,40 @@
 backend:
-  name: git-gateway
-  branch: master
+  # name: git-gateway
+  # branch: master
+  name: github
+  repo: RedRichard/letrast-gatsby
 
 media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: article
+    label: Article
+    folder: articles
     create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    preview_path: "articulos/{{slug}}"
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: Title, required: true }
+      - {
+          name: slug,
+          label: Slug,
+          hint: "Sólo minúsculas y guiones en lugar de espacios",
+          required: true,
+          pattern:
+            ['^[a-z\-]+$', "Sólo minúsculas y guiones en lugar de espacios"],
+        }
+      - { name: subtitle, label: subtitle, required: true }
+      - { name: body, label: Body, widget: markdown, required: true }
+      - { name: "image", label: "Image", widget: "image", required: true }
+      - { name: date, label: Date, widget: datetime, required: true }
+
+  - name: category
+    label: Category
+    folder: categories
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    preview_path: "categorias/{{name}}"
+    fields:
+      - { name: title, label: Title, required: true }
+      - { name: articles, label: "Artículos", widget: "relation", collection: "article", searchFields:["title", "Título"], valueField: "title", multiple: true}
