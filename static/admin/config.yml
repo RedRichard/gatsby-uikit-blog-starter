@@ -1,19 +1,23 @@
 backend:
   # name: git-gateway
   # branch: master
+  #name: github
+  #repo: RedRichard/letrast-gatsby
+  #name: test-repo
   name: github
   repo: RedRichard/letrast-gatsby
+  branch: testing
 
 media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: article
-    label: Article
-    folder: articles
+  - name: post
+    label: Post
+    folder: content/posts
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    preview_path: "articulos/{{slug}}"
+    preview_path: "{{category}}/{{slug}}"
     fields:
       - { name: title, label: Title, required: true }
       - {
@@ -26,15 +30,66 @@ collections:
         }
       - { name: subtitle, label: subtitle, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
-      - { name: "image", label: "Image", widget: "image", required: true }
+      - { name: image, label: Image, widget: image, required: true }
       - { name: date, label: Date, widget: datetime, required: true }
+      - {
+          widget: relation,
+          name: author,
+          label: Autor,
+          collection: "author",
+          valueField: "title",
+          required: true,
+          searchFields: ["title"],
+          displayFields: ["title"],
+        }
+      - {
+          widget: relation,
+          name: category,
+          label: Categoría,
+          collection: category,
+          valueField: title,
+          required: true,
+          searchFields: ["title"],
+          displayFields: ["title"],
+        }
 
   - name: category
     label: Category
-    folder: categories
+    folder: content/categories
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    preview_path: "categorias/{{name}}"
+    preview_path: "categorias/{{title}}"
     fields:
-      - { name: title, label: Title, required: true }
-      - { name: articles, label: "Artículos", widget: "relation", collection: "article", searchFields:["title", "Título"], valueField: "title", multiple: true}
+      - { name: title, label: Categoría, required: true }
+      - {
+          widget: relation,
+          name: posts,
+          label: Posts,
+          collection: "post",
+          valueField: "title",
+          required: false,
+          multiple: true,
+          searchFields: ["title"],
+          displayFields: ["title"],
+        }
+
+  - name: author
+    label: Author
+    folder: content/authors
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    preview_path: "autores/{{title}}"
+    fields:
+      - { name: title, label: Nombre, required: true }
+      - { name: body, label: Bio, required: true }
+      - {
+          widget: relation,
+          name: posts,
+          label: Posts,
+          collection: "post",
+          valueField: "title",
+          required: false,
+          multiple: true,
+          searchFields: ["title"],
+          displayFields: ["title"],
+        }
