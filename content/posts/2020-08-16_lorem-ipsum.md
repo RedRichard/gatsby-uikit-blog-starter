@@ -2,7 +2,7 @@
 title: Lorem Ipsum
 slug: lorem-ipsum
 subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-image: https://images.unsplash.com/photo-1597508933754-88c40a085822?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80
+image: https://cdn.pixabay.com/photo/2020/04/28/12/55/iceland-5104382_1280.jpg
 date: 2020-08-01T04:41:48.939Z
 author: Autor 1
 category: Artículos
