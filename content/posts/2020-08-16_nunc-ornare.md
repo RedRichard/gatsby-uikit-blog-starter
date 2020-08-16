@@ -2,7 +2,7 @@
 title: Nunc ornare
 slug: nunc-ornare
 subtitle: Nunc ornare, magna eu accumsan viverra, nisi nibh volutpat nulla.
-image: https://images.unsplash.com/photo-1597477978861-deb6fbede0f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1005&q=80
+image: https://cdn.pixabay.com/photo/2020/01/26/19/32/architecture-4795667_1280.jpg
 date: 2020-08-02T04:43:36.862Z
 author: Autor 2
 category: Artículos
