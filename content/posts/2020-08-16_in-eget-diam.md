@@ -1,11 +1,11 @@
 ---
-title: In eget diam
-slug: in-eget-diam
-subtitle: In eget diam eu neque maximus dignissim eget vel ex.
-image: https://cdn.pixabay.com/photo/2020/08/11/13/28/flowers-5479950_1280.jpg
-date: 2020-08-07T04:51:10.539Z
-author: Autor 2
-category: Ensayos
+postTitle: In eget diam
+postSlug: in-eget-diam
+postSubtitle: In eget diam eu neque maximus dignissim eget vel ex.
+postImage: https://cdn.pixabay.com/photo/2020/08/11/13/28/flowers-5479950_1280.jpg
+postDate: 2020-08-07T04:51:10.539Z
+postAuthor: Autor 2
+postCategory: Ensayos
 ---
 <!--StartFragment-->
 

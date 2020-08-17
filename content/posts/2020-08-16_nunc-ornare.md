@@ -1,11 +1,11 @@
 ---
-title: Nunc ornare
-slug: nunc-ornare
-subtitle: Nunc ornare, magna eu accumsan viverra, nisi nibh volutpat nulla.
-image: https://cdn.pixabay.com/photo/2020/01/26/19/32/architecture-4795667_1280.jpg
-date: 2020-08-02T04:43:36.862Z
-author: Autor 2
-category: Artículos
+postTitle: Nunc ornare
+postSlug: nunc-ornare
+postSubtitle: Nunc ornare, magna eu accumsan viverra, nisi nibh volutpat nulla.
+postImage: https://cdn.pixabay.com/photo/2020/01/26/19/32/architecture-4795667_1280.jpg
+postDate: 2020-08-02T04:43:36.862Z
+postAuthor: Autor 2
+postCategory: Artículos
 ---
 <!--StartFragment-->
 

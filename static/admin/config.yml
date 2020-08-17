@@ -16,54 +16,62 @@ collections:
     label: Post
     folder: content/posts
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    preview_path: "{{category}}/{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}_{{postTitle}}"
+    preview_path: "{{postCategory}}/{{postSlug}}"
     fields:
-      - { name: title, label: Title, required: true }
+      - { name: postTitle, label: Title, required: true }
       - {
-          name: slug,
+          name: postSlug,
           label: Slug,
           hint: "Sólo minúsculas y guiones en lugar de espacios",
           required: true,
           pattern:
             ['^[a-z\-]+$', "Sólo minúsculas y guiones en lugar de espacios"],
         }
-      - { name: subtitle, label: subtitle, required: true }
+      - { name: postSubtitle, label: subtitle, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
-      - { name: image, label: Image, widget: image, required: true }
-      - { name: date, label: Date, widget: datetime, required: true }
+      - { name: postImage, label: Image, widget: string, required: true }
+      - { name: postDate, label: Date, widget: datetime, required: true }
       - {
           widget: relation,
-          name: author,
+          name: postAuthor,
           label: Autor,
           collection: "author",
-          valueField: "title",
+          valueField: "authorName",
           required: true,
-          searchFields: ["title"],
-          displayFields: ["title"],
+          searchFields: ["authorName", "body"],
+          displayFields: ["authorName", "body"],
         }
       - {
           widget: relation,
-          name: category,
+          name: postCategory,
           label: Categoría,
           collection: category,
-          valueField: title,
+          valueField: categoryTitle,
           required: true,
-          searchFields: ["title"],
-          displayFields: ["title"],
+          searchFields: ["categoryTitle"],
+          displayFields: ["categoryTitle"],
         }
 
   - name: category
     label: Category
     folder: content/categories
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    preview_path: "categorias/{{title}}"
+    slug: "{{year}}-{{month}}-{{day}}_{{categoryTitle}}"
+    preview_path: "categorias/{{categoryTitle}}"
     fields:
-      - { name: title, label: Categoría, required: true }
+      - { name: categoryTitle, label: Categoría, required: true }
+      - {
+          name: categorySlug,
+          label: Slug,
+          hint: "Sólo minúsculas y guiones en lugar de espacios",
+          required: true,
+          pattern:
+            ['^[a-z\-]+$', "Sólo minúsculas y guiones en lugar de espacios"],
+        }
       - {
           widget: relation,
-          name: posts,
+          name: categoryPosts,
           label: Posts,
           collection: "post",
           valueField: "title",
@@ -77,11 +85,19 @@ collections:
     label: Author
     folder: content/authors
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    preview_path: "autores/{{title}}"
+    slug: "{{year}}-{{month}}-{{day}}_{{authorName}}"
+    preview_path: "autores/{{authorName}}"
     fields:
-      - { name: title, label: Nombre, required: true }
-      - { name: body, label: Bio, required: true }
+      - { name: authorName, label: Nombre, widget: string, required: true }
+      - {
+          name: authorSlug,
+          label: Slug,
+          hint: "Sólo minúsculas y guiones en lugar de espacios",
+          required: true,
+          pattern:
+            ['^[a-z\-]+$', "Sólo minúsculas y guiones en lugar de espacios"],
+        }
+      - { name: body, label: Bio, widget: string, required: true }
       - {
           widget: relation,
           name: posts,

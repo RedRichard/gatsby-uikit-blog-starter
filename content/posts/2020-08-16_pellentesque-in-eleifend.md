@@ -1,11 +1,11 @@
 ---
-title: Pellentesque in eleifend
-slug: pellentesque-in-eleifend
-subtitle: Pellentesque in eleifend sem, sit amet fringilla mi.
-image: https://cdn.pixabay.com/photo/2020/07/14/14/40/palm-field-5404428_1280.jpg
-date: 2020-08-16T04:48:56.344Z
-author: Autor 1
-category: Artículos
+postTitle: Pellentesque in eleifend
+postSlug: pellentesque-in-eleifend
+postSubtitle: Pellentesque in eleifend sem, sit amet fringilla mi.
+postImage: https://cdn.pixabay.com/photo/2020/07/14/14/40/palm-field-5404428_1280.jpg
+postDate: 2020-08-16T04:48:56.344Z
+postAuthor: Autor 1
+postCategory: Artículos
 ---
 <!--StartFragment-->
 

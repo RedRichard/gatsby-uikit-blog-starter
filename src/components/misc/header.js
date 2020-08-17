@@ -15,30 +15,34 @@ const Header = () => (
         </ul>
 
         <ul className="uk-navbar-nav">
-          {/* <StaticQuery
+          <StaticQuery
             query={graphql`
-              query {
-                allStrapiCategory {
+              query BlogCategories {
+                allMarkdownRemark(
+                  filter: { frontmatter: { categoryTitle: { nin: [null] } } }
+                ) {
                   edges {
                     node {
-                      name
-                      strapiId
-                      url
+                      frontmatter {
+                        categoryTitle
+                      }
                     }
                   }
                 }
               }
             `}
             render={data =>
-              data.allStrapiCategory.edges.map((category, i) => {
+              data.allMarkdownRemark.edges.map((category, i) => {
                 return (
-                  <li key={category.node.strapiId}>
-                    <Link to={`/${category.node.url}`}>Artículos</Link>
+                  <li key={category.node.frontmatter.categorySlug}>
+                    <Link to={`/${category.node.frontmatter.categorySlug}`}>
+                      {category.node.frontmatter.categoryTitle}
+                    </Link>
                   </li>
                 )
               })
             }
-          /> */}
+          />
         </ul>
       </div>
     </nav>
