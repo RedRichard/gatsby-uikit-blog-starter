@@ -1,11 +1,11 @@
 ---
-title: Maecenas tellus
-slug: maecenas-tellus
-subtitle: Maecenas tellus sapien, imperdiet in urna eget, lacinia ultrices magna.
-image: https://cdn.pixabay.com/photo/2019/10/21/14/54/oranges-4566275_1280.jpg
-date: 2020-08-08T04:52:16.503Z
-author: Autor 1
-category: Artículos
+postTitle: Maecenas tellus
+postSlug: maecenas-tellus
+postSubtitle: Maecenas tellus sapien, imperdiet in urna eget, lacinia ultrices magna.
+postImage: https://cdn.pixabay.com/photo/2019/10/21/14/54/oranges-4566275_1280.jpg
+postDate: 2020-08-08T04:52:16.503Z
+postAuthor: Autor 1
+postCategory: Artículos
 ---
 <!--StartFragment-->
 
