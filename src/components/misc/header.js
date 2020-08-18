@@ -20,11 +20,13 @@ const Header = () => (
               query BlogCategories {
                 allMarkdownRemark(
                   filter: { frontmatter: { categoryTitle: { nin: [null] } } }
+                  sort: { fields: frontmatter___categoryTitle, order: ASC }
                 ) {
                   edges {
                     node {
                       frontmatter {
                         categoryTitle
+                        categorySlug
                       }
                     }
                   }

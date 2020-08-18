@@ -10,7 +10,10 @@ const articleList = ({ articles }) => {
     >
       {articles.map((article, i) => {
         return (
-          <Card article={article} key={`article_${article.node.strapiId}`} />
+          <Card
+            article={article}
+            key={`article_${article.node.frontmatter.postSlug}`}
+          />
         )
       })}
     </div>

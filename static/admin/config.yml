@@ -37,20 +37,21 @@ collections:
           name: postAuthor,
           label: Autor,
           collection: "author",
-          valueField: "authorName",
+          valueField: "authorSlug",
           required: true,
-          searchFields: ["authorName", "body"],
-          displayFields: ["authorName", "body"],
+          searchFields: ["authorSlug"],
+          displayFields: ["authorSlug"],
         }
       - {
           widget: relation,
           name: postCategory,
           label: Categoría,
           collection: category,
-          valueField: categoryTitle,
+          valueField: categorySlug,
           required: true,
-          searchFields: ["categoryTitle"],
-          displayFields: ["categoryTitle"],
+          multiple: true,
+          searchFields: ["categorySlug"],
+          displayFields: ["categorySlug"],
         }
 
   - name: category
@@ -74,11 +75,11 @@ collections:
           name: categoryPosts,
           label: Posts,
           collection: "post",
-          valueField: "title",
+          valueField: "postSlug",
           required: false,
           multiple: true,
-          searchFields: ["title"],
-          displayFields: ["title"],
+          searchFields: ["postSlug"],
+          displayFields: ["postSlug"],
         }
 
   - name: author
@@ -103,9 +104,9 @@ collections:
           name: posts,
           label: Posts,
           collection: "post",
-          valueField: "title",
+          valueField: "postSlug",
           required: false,
           multiple: true,
-          searchFields: ["title"],
-          displayFields: ["title"],
+          searchFields: ["postSlug"],
+          displayFields: ["postSlug"],
         }

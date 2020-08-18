@@ -2,33 +2,36 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 // Components
-import Layout from "components/layout"
-import SEO from "components/seo"
-import TextList from "components/articles/articleList"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import TextList from "../components/articles/articleList"
 
-import Banner from "images/main-banner.png"
+import Banner from "../images/main-banner.png"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    {/* <div className="uk-section uk-section-default uk-padding-remove-top">
+    <div className="uk-section uk-section-default uk-padding-remove-top">
       <div className="uk-container uk-container-large uk-padding-remove-left uk-padding-remove-right">
         <img src={Banner} alt="Letras Transformadoras"></img>
       </div>
-    </div> */}
-    {/* <StaticQuery
+    </div>
+    <StaticQuery
       query={graphql`
-        query {
-          allStrapiArticle(filter: { category: { text: { eq: 1 } } }) {
+        query IndexPost {
+          allMarkdownRemark(
+            filter: { frontmatter: { postTitle: { nin: [null] } } }
+            sort: { fields: frontmatter___postDate, order: DESC }
+          ) {
             edges {
               node {
-                title
-                subtitle
-                strapiId
-                image {
-                  publicURL
+                frontmatter {
+                  postTitle
+                  postSubtitle
+                  postSlug
+                  postImage
+                  postDate
                 }
-                url
               }
             }
           }
@@ -36,19 +39,14 @@ const IndexPage = () => (
       `}
       render={data => (
         <>
-          <div className="uk-section uk-section-default uk-padding-remove-top">
-            <div className="uk-container uk-container-large uk-padding-remove-left uk-padding-remove-right">
-              <img src={Banner} alt="Letras Transformadoras"></img>
-            </div>
-          </div>
           <div className="uk-section uk-padding-remove-top">
             <div className="uk-container uk-container-large">
-              <TextList articles={data.allStrapiArticle.edges} />
+              <TextList articles={data.allMarkdownRemark.edges} />
             </div>
           </div>
         </>
       )}
-    /> */}
+    />
   </Layout>
 )
 

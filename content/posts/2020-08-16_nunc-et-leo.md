@@ -4,8 +4,8 @@ postSlug: nunc-et-leo
 postSubtitle: Nunc et leo interdum, vulputate leo tincidunt, pretium erat.
 postImage: https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg
 postDate: 2020-08-05T04:50:14.606Z
-postAuthor: Autor 2
-postCategory: Artículos
+postAuthor: autor-dos
+postCategory: articulos
 ---
 <!--StartFragment-->
 
