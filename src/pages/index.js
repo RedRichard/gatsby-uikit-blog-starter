@@ -30,6 +30,7 @@ const IndexPage = () => (
                   postSubtitle
                   postSlug
                   postImage
+                  postCategory
                   postDate
                 }
               }

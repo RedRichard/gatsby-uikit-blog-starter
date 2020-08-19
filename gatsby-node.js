@@ -11,6 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               frontmatter {
                 postSlug
+                postCategory
               }
             }
           }
