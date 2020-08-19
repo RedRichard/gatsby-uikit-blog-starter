@@ -5,8 +5,7 @@ postSubtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 postImage: https://cdn.pixabay.com/photo/2020/04/28/12/55/iceland-5104382_1280.jpg
 postDate: 2020-08-01T04:41:48.939Z
 postAuthor: autor-uno
-postCategory:
-  - ensayos
+postCategory: ensayos
 ---
 <!--StartFragment-->
 

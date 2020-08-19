@@ -5,8 +5,7 @@ postSubtitle: Quisque ullamcorper leo turpis, ac varius magna volutpat eget.
 postImage: https://cdn.pixabay.com/photo/2020/07/09/10/20/bird-5386773_1280.jpg
 postDate: 2020-08-04T04:47:55.512Z
 postAuthor: autor-dos
-postCategory:
-  - articulos
+postCategory: articulos
 ---
 <!--StartFragment-->
 

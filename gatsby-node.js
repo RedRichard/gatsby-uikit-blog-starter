@@ -3,7 +3,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        articles: allMarkdownRemark(
+        posts: allMarkdownRemark(
           filter: { frontmatter: { postTitle: { nin: [null] } } }
           sort: { fields: frontmatter___postDate, order: DESC }
         ) {
@@ -35,8 +35,8 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  // Create blog articles pages.
-  const articles = result.data.articles.edges
+  // Variables for new pages:
+  const posts = result.data.posts.edges
   const categories = result.data.categories.edges
 
   // articles.forEach((article, index) => {
@@ -54,7 +54,17 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/${category.node.frontmatter.categorySlug}`,
       component: require.resolve("./src/templates/category.js"),
       context: {
-        id: category.node.categorySlug,
+        id: category.node.frontmatter.categorySlug,
+      },
+    })
+  })
+
+  posts.forEach((post, index) => {
+    createPage({
+      path: `/${post.node.frontmatter.postCategory}/${post.node.frontmatter.postSlug}`,
+      component: require.resolve("./src/templates/post.js"),
+      context: {
+        id: post.node.frontmatter.postSlug,
       },
     })
   })

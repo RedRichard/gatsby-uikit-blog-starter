@@ -5,8 +5,7 @@ postSubtitle: Nunc ornare, magna eu accumsan viverra, nisi nibh volutpat nulla.
 postImage: https://cdn.pixabay.com/photo/2020/01/26/19/32/architecture-4795667_1280.jpg
 postDate: 2020-08-02T04:43:36.862Z
 postAuthor: autor-dos
-postCategory:
-  - ensayos
+postCategory: ensayos
 ---
 <!--StartFragment-->
 

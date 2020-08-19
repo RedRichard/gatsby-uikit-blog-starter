@@ -4,36 +4,53 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 // import ArticlesComponent from "../components/articles"
 import Layout from "../components/layout"
+import PostList from "../components/posts/postList"
 
-// export const query = graphql`
-//   query Category($url: String!) {
-//     articles: allStrapiArticle(filter: { category: { url: { eq: $url } } }) {
-//       edges {
-//         node {
-//           strapiId
-//           title
-//           category {
-//             name
-//           }
-//           image {
-//             publicURL
-//           }
-//         }
-//       }
-//     }
-//     category: strapiCategory(url: { eq: $url }) {
-//       name
-//     }
-//   }
-// `
+export default function Category({ data }) {
+  const articles = data.articles.edges
+  const category = data.category
 
-const Category = () => {
   return (
     <Layout>
       <SEO title="category" />
-      <div>Hola</div>
+      <div className="uk-section">
+        <div className="uk-container uk-container-large">
+          <h2>{category.frontmatter.categoryTitle}</h2>
+        </div>
+        <div className="uk-container uk-container-large">
+          <PostList articles={articles} />
+        </div>
+      </div>
     </Layout>
   )
 }
 
-export default Category
+export const pageQuery = graphql`
+  query Category($id: String!) {
+    articles: allMarkdownRemark(
+      filter: {
+        frontmatter: { postTitle: { nin: [null] }, postCategory: { eq: $id } }
+      }
+      sort: { fields: frontmatter___postDate, order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            postSlug
+            postTitle
+            postImage
+            postDate
+            postCategory
+            postAuthor
+            postSubtitle
+          }
+        }
+      }
+    }
+    category: markdownRemark(frontmatter: { categorySlug: { eq: $id } }) {
+      frontmatter {
+        categoryTitle
+      }
+    }
+  }
+`

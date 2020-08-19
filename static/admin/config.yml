@@ -49,7 +49,7 @@ collections:
           collection: category,
           valueField: categorySlug,
           required: true,
-          multiple: true,
+          multiple: false,
           searchFields: ["categorySlug"],
           displayFields: ["categorySlug"],
         }

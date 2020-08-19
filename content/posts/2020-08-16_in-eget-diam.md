@@ -5,8 +5,7 @@ postSubtitle: In eget diam eu neque maximus dignissim eget vel ex.
 postImage: https://cdn.pixabay.com/photo/2020/08/11/13/28/flowers-5479950_1280.jpg
 postDate: 2020-08-07T04:51:10.539Z
 postAuthor: autor-dos
-postCategory:
-  - articulos
+postCategory: articulos
 ---
 <!--StartFragment-->
 
