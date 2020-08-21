@@ -3,6 +3,8 @@ authorName: Autor 1
 authorSlug: autor-uno
 authorImage: /assets/tom-morbey-bievrp3zqqo-unsplash.jpg
 authorTwitter: RedGomric
+authorInstagram: ""
+authorFacebook: ""
 posts:
   - cras-eget
   - lorem-ipsum
