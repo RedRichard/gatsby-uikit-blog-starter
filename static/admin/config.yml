@@ -111,6 +111,7 @@ collections:
           widget: string,
           required: false,
           hint: "Sólo el nombre de usuario, sin el @",
+          default: "",
         }
       - {
           name: authorInstagram,
@@ -118,6 +119,7 @@ collections:
           widget: string,
           required: false,
           hint: "Sólo el nombre de usuario",
+          default: "",
         }
       - {
           name: authorFacebook,
@@ -125,6 +127,7 @@ collections:
           widget: string,
           required: false,
           hint: "Sólo el nombre de usuario",
+          default: "",
         }
       - {
           widget: relation,

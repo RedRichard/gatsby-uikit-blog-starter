@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import PostList from "../components/posts/recentPostList"
 import AuthorCard from "../components/cards/authorCard"
+import Disqus from "../components/comments/disqus"
 
 export default function Category({ data }) {
   const post = data.post
@@ -37,6 +38,8 @@ export default function Category({ data }) {
               <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
               <h4>{post.frontmatter.postDate}</h4>
               <AuthorCard author={author} />
+              <hr className="uk-divider-icon" />
+              <Disqus post={post} />
             </div>
             <div className="uk-text-justify uk-width-expand@m">
               <p className="uk-text-lead">Publicaciones recientes</p>
