@@ -4,7 +4,7 @@ import React from "react"
 const Header = () => (
   <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav
-      className="uk-navbar-container uk-margin uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-margin-remove-bottom"
+      className="uk-navbar-container uk-padding uk-padding-remove-vertical uk-margin-remove"
       uk-navbar="true"
     >
       <div className="uk-navbar-left">

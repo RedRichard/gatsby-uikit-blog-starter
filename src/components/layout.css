@@ -12,3 +12,11 @@
 .img-hover-zoom:hover img {
   filter: grayscale(50%);
 }
+
+.main-background-image {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+}

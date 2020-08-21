@@ -12,7 +12,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="uk-section uk-section-default uk-padding-remove-top">
-      <div className="uk-container uk-container-large uk-padding-remove-left uk-padding-remove-right">
+      <div className="uk-container uk-container-large uk-padding-remove">
         <img src={Banner} alt="Letras Transformadoras"></img>
       </div>
     </div>
