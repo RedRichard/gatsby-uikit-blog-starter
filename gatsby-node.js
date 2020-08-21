@@ -28,6 +28,17 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        authors: allMarkdownRemark(
+          filter: { frontmatter: { authorSlug: { nin: [null] } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                authorSlug
+              }
+            }
+          }
+        }
       }
     `
   )
@@ -39,6 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Variables for new pages:
   const posts = result.data.posts.edges
   const categories = result.data.categories.edges
+  const authors = result.data.authors.edges
 
   // articles.forEach((article, index) => {
   //   createPage({
@@ -66,6 +78,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve("./src/templates/post.js"),
       context: {
         id: post.node.frontmatter.postSlug,
+      },
+    })
+  })
+
+  authors.forEach((author, index) => {
+    createPage({
+      path: `/author/${author.node.frontmatter.authorSlug}`,
+      component: require.resolve("./src/templates/authorPosts.js"),
+      context: {
+        id: author.node.frontmatter.authorSlug,
       },
     })
   })

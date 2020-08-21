@@ -4,10 +4,12 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import PostList from "../components/posts/recentPostList"
+import AuthorCard from "../components/cards/authorCard"
 
 export default function Category({ data }) {
   const post = data.post
   const relatedPosts = data.related
+  const author = data.author
 
   return (
     <Layout>
@@ -34,6 +36,7 @@ export default function Category({ data }) {
             <div className="uk-text-justify uk-width-3-4@m">
               <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
               <h4>{post.frontmatter.postDate}</h4>
+              <AuthorCard author={author} />
             </div>
             <div className="uk-text-justify uk-width-expand@m">
               <p className="uk-text-lead">Publicaciones recientes</p>
@@ -60,6 +63,17 @@ export const pageQuery = graphql`
       }
       html
     }
+    author: markdownRemark(frontmatter: { posts: { in: [$id] } }) {
+      frontmatter {
+        authorName
+        authorSlug
+        authorTwitter
+        authorFacebook
+        authorInstagram
+        authorImage
+      }
+      html
+    }
     related: allMarkdownRemark(
       limit: 3
       sort: { fields: frontmatter___postDate, order: DESC }
@@ -69,6 +83,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             postAuthor
+            postSlug
             postCategory
             postDate(formatString: "DD-MM-YYYY")
             postTitle

@@ -100,6 +100,33 @@ collections:
         }
       - { name: body, label: Bio, widget: string, required: true }
       - {
+          name: authorImage,
+          label: "Imagen de perfil",
+          widget: image,
+          required: true,
+        }
+      - {
+          name: authorTwitter,
+          label: "Twitter",
+          widget: string,
+          required: false,
+          hint: "Sólo el nombre de usuario, sin el @",
+        }
+      - {
+          name: authorInstagram,
+          label: "Instagram",
+          widget: string,
+          required: false,
+          hint: "Sólo el nombre de usuario",
+        }
+      - {
+          name: authorFacebook,
+          label: "Facebook",
+          widget: string,
+          required: false,
+          hint: "Sólo el nombre de usuario",
+        }
+      - {
           widget: relation,
           name: posts,
           label: Posts,
