@@ -12,7 +12,7 @@ export default function Category({ data }) {
 
   return (
     <Layout>
-      <SEO title="category" />
+      <SEO title={category.frontmatter.categoryTitle} />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h2>{category.frontmatter.categoryTitle}</h2>

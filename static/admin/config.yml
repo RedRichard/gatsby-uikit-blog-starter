@@ -140,3 +140,43 @@ collections:
           searchFields: ["postSlug"],
           displayFields: ["postSlug"],
         }
+
+  - label: "Configuración Global"
+    name: "pages"
+    files:
+      - label: "Acerca de"
+        name: "about"
+        file: "content/config/aboutPage.md"
+        fields:
+          - { name: aboutTitle, label: Title, required: true }
+          - { name: body, label: Body, widget: markdown, required: true }
+          - { name: aboutImage, label: Image, widget: string, required: true }
+
+      - label: "Social Media"
+        name: "social"
+        file: "content/config/globalConfig.md"
+        fields:
+          - {
+              name: siteTwitter,
+              label: "Twitter",
+              widget: string,
+              required: false,
+              hint: "Sólo el nombre de usuario, sin el @",
+              default: "",
+            }
+          - {
+              name: siteInstagram,
+              label: "Instagram",
+              widget: string,
+              required: false,
+              hint: "Sólo el nombre de usuario",
+              default: "",
+            }
+          - {
+              name: siteFacebook,
+              label: "Facebook",
+              widget: string,
+              required: false,
+              hint: "Sólo el nombre de usuario",
+              default: "",
+            }
