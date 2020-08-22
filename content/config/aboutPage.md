@@ -1,5 +1,5 @@
 ---
-aboutTitle: Acerca de Letras Transformadoras
+aboutTitle: Acerca de
 aboutImage: https://cdn.pixabay.com/photo/2020/04/27/17/42/sand-5100918_1280.jpg
 ---
 <!--StartFragment-->
