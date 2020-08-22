@@ -16,12 +16,17 @@ class Header extends React.Component {
         >
           <div className="uk-navbar-left">
             <ul className="uk-navbar-nav uk-logo">
-              <li>
-                <Link to="/">Home</Link>
+              <li className="uk-navbar-toggle">
+                <span
+                  className="uk-margin-small-right uk-hidden@m"
+                  uk-navbar-toggle-icon="true"
+                  uk-toggle="target: #sidenav"
+                ></span>
+                <Link to="/">Letras T</Link>
               </li>
             </ul>
 
-            <ul className="uk-navbar-nav">
+            <ul className="uk-navbar-nav uk-visible@m">
               {categories.edges.map((category, i) => {
                 return (
                   <li key={category.node.frontmatter.categorySlug}>
@@ -33,8 +38,8 @@ class Header extends React.Component {
               })}
             </ul>
           </div>
-          <div className="uk-navbar-right">
-            <ul className="uk-navbar-nav">
+          <div className="uk-navbar-right uk-visible@m">
+            <ul className="uk-navbar-nav ">
               <li>
                 <Link to="/about">Acerca de</Link>
               </li>
@@ -51,6 +56,31 @@ class Header extends React.Component {
             </div>
           </div>
         </nav>
+
+        <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+          <div class="uk-offcanvas-bar">
+            <ul class="uk-nav">
+              {categories.edges.map((category, i) => {
+                return (
+                  <li key={category.node.frontmatter.categorySlug}>
+                    <Link to={`/${category.node.frontmatter.categorySlug}`}>
+                      {category.node.frontmatter.categoryTitle}
+                    </Link>
+                  </li>
+                )
+              })}
+              <li>
+                <Link to="/about">Acerca de</Link>
+              </li>
+              <SocialMediaCard
+                twitter={socialMedia.frontmatter.siteTwitter}
+                instagram={socialMedia.frontmatter.siteInstagram}
+                facebook={socialMedia.frontmatter.siteFacebook}
+                ratio="1"
+              />
+            </ul>
+          </div>
+        </div>
       </div>
     )
   }
