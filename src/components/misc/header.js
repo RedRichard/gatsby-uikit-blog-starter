@@ -31,7 +31,7 @@ class Header extends React.Component {
                 <ul className="uk-navbar-nav ">
                   <li>
                     <span
-                      className="uk-padding"
+                      className="uk-padding "
                       uk-navbar-toggle-icon="true"
                       uk-toggle="target: #sidenav"
                     />
