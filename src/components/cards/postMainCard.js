@@ -1,9 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const frontPageCard = ({ article }) => {
+const postMainCard = ({ article }) => {
   return (
-    // <div uk-height-match="target: > div > .uk-card; row: false">
     <Link
       to={`/${article.node.frontmatter.postCategory}/${article.node.frontmatter.postSlug}`}
       className="uk-link-reset"
@@ -28,4 +27,4 @@ const frontPageCard = ({ article }) => {
   )
 }
 
-export default frontPageCard
+export default postMainCard

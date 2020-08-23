@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Sifonn;
+  src: url("../../static/fonts/sifonn/SIFONN_PRO.otf");
+}
+
 .uk-navbar-container {
   background-color: #14110f !important;
   color: white;
@@ -19,4 +24,24 @@
     rgba(0, 0, 0, 0.5),
     rgba(255, 255, 255, 0)
   );
+}
+
+.name-banner {
+  font-family: Sifonn;
+  font-size: 5vw;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  text-shadow: rgb(0, 0, 0) -2px 3px 9px;
+}
+
+.name-banner .name-banner-color1 {
+  color: #55cdfc;
+}
+
+.name-banner .name-banner-color2 {
+  color: #f7a8b8;
 }

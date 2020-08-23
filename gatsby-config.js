@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Letras transformadoras`,
+    title: `Letras Transformadoras`,
+    shortTitle: `Letras T`,
     description: `Una colección de ensayos...`,
     author: `@letrastransformadoras`,
   },
