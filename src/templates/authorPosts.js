@@ -2,9 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import SEO from "../components/seo"
-// import ArticlesComponent from "../components/articles"
 import Layout from "../components/layout"
 import PostList from "../components/posts/postList"
+import NameBanner from "../components/misc/pageTitleBanner"
 
 export default function AuthorPosts({ data }) {
   const articles = data.articles.edges
@@ -13,10 +13,12 @@ export default function AuthorPosts({ data }) {
   return (
     <Layout>
       <SEO title="category" />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h2>{author.frontmatter.authorName}</h2>
-        </div>
+      <NameBanner
+        title={author.frontmatter.authorName
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")}
+      />
+      <div className="uk-section uk-padding-remove-top">
         <div className="uk-container uk-container-large">
           <PostList articles={articles} />
         </div>
