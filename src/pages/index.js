@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostList from "../components/posts/indexPostList"
 
-import TitleBanner from "../components/misc/titleBanner"
+import TitleBanner from "../components/misc/nameBanner"
 
 const IndexPage = () => (
   <Layout>

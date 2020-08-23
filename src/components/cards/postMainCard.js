@@ -8,7 +8,7 @@ const postMainCard = ({ article }) => {
       className="uk-link-reset"
     >
       <div className="uk-card uk-card-default">
-        <div className="img-hover-zoom uk-card-media-top uk-cover-container uk-cover-container uk-height-medium">
+        <div className="uk-card-media-top uk-cover-container uk-height-medium img-hover-zoom">
           <img
             src={article.node.frontmatter.postImage}
             alt={article.node.frontmatter.postImage}

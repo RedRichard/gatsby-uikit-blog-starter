@@ -23,8 +23,10 @@ export default function Category({ data }) {
             uk-img="true"
           >
             <div className="main-background-image uk-padding">
-              <h1 className="uk-text-normal uk-text-uppercase">
-                {post.frontmatter.postTitle}
+              <h1 className="uk-text-normal uk-text-uppercase post-title-banner">
+                {post.frontmatter.postTitle
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")}
               </h1>
               <h2 className="uk-text-lead">{post.frontmatter.postSubtitle}</h2>
             </div>

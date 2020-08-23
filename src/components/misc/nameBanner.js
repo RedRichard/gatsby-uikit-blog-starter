@@ -1,13 +1,16 @@
 import React from "react"
 
-const titleBanner = () => {
+const nameBanner = () => {
   return (
     <div className="uk-section uk-section-default uk-padding">
       <div className="uk-container uk-container-large">
         <div className="name-banner">
           <div>
-            <span className="name-banner-color1">Letras</span>{" "}
-            <span className="name-banner-color2">Transformadoras</span>
+            <span className="name-banner-color1">
+              Letras
+              <br /> Trans
+            </span>
+            <span className="name-banner-color2">formadoras</span>
           </div>
         </div>
       </div>
@@ -15,4 +18,4 @@ const titleBanner = () => {
   )
 }
 
-export default titleBanner
+export default nameBanner

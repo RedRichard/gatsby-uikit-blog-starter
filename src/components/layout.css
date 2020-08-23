@@ -28,7 +28,7 @@
 
 .name-banner {
   font-family: Sifonn;
-  font-size: 5vw;
+  font-size: 7vw;
   color: #000000;
   font-weight: 400;
   text-decoration: none;
@@ -44,4 +44,27 @@
 
 .name-banner .name-banner-color2 {
   color: #f7a8b8;
+}
+
+.page-title-banner {
+  font-family: Sifonn;
+  font-size: 7vw;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+
+.post-title-banner {
+  font-family: Sifonn;
+  font-size: 5vw;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  text-shadow: rgb(0, 0, 0) -2px 3px 9px;
 }

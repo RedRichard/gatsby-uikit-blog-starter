@@ -12,6 +12,7 @@ class Header extends React.Component {
 
     return (
       <>
+        {/* Navbar in small screens */}
         <div className="uk-hidden@m">
           <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
             <nav
@@ -20,22 +21,27 @@ class Header extends React.Component {
             >
               <div className="uk-navbar-left">
                 <ul className="uk-navbar-nav uk-logo">
-                  <li>
-                    <span
-                      className="uk-padding uk-padding-remove-right"
-                      uk-navbar-toggle-icon="true"
-                      uk-toggle="target: #sidenav"
-                    ></span>
-                  </li>
                   <li className="uk-navbar-toggle">
                     <Link to="/">{metadata.siteMetadata.shortTitle}</Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="uk-navbar-right">
+                <ul className="uk-navbar-nav ">
+                  <li>
+                    <span
+                      className="uk-padding"
+                      uk-navbar-toggle-icon="true"
+                      uk-toggle="target: #sidenav"
+                    />
                   </li>
                 </ul>
               </div>
             </nav>
           </div>
 
-          <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+          <div id="sidenav" uk-offcanvas="overlay: true" class="uk-offcanvas">
             <div class="uk-offcanvas-bar">
               <ul class="uk-nav">
                 {categories.edges.map((category, i) => {
@@ -61,6 +67,7 @@ class Header extends React.Component {
           </div>
         </div>
 
+        {/* Navbar in big screens */}
         <div className="uk-visible@m">
           <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
             <nav
