@@ -1,40 +1,32 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faTwitter,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
-export default function socialMediaBanner({
-  twitter,
-  instagram,
-  facebook,
-  ratio,
-}) {
+export default function socialMediaBanner({ twitter, instagram, facebook }) {
   return (
     <div className="uk-grid">
       <div>
         {twitter && (
           <a href={`http://www.twitter.com/${twitter}`}>
-            <i
-              aria-label="Follow Twitter"
-              uk-icon={`icon: twitter; ratio:${ratio}`}
-            />
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
         )}
       </div>
       <div>
         {instagram && (
           <a href={`http://www.instagram.com/${instagram}`}>
-            <i
-              aria-label="Follow Instagram"
-              uk-icon={`icon: instagram; ratio:${ratio}`}
-            />
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         )}
       </div>
       <div>
         {facebook && (
           <a href={`http://www.facebook.com/${facebook}`}>
-            <i
-              aria-label="Follow Facebook"
-              uk-icon={`icon: facebook; ratio:${ratio}`}
-            />
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
         )}
       </div>

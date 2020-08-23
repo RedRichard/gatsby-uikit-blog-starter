@@ -17,7 +17,6 @@ class Footer extends React.Component {
                 twitter={socialMedia.frontmatter.siteTwitter}
                 instagram={socialMedia.frontmatter.siteInstagram}
                 facebook={socialMedia.frontmatter.siteFacebook}
-                ratio="1"
               />
             </div>
             <div>

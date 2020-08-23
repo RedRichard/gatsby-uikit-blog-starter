@@ -1,5 +1,7 @@
 import { Link, StaticQuery, graphql } from "gatsby"
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 import SocialMediaCard from "../socialMedia/socialMediaBanner"
 
@@ -14,33 +16,6 @@ class Header extends React.Component {
       <>
         {/* Navbar in small screens */}
         <div className="uk-hidden@m">
-          <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-            <nav
-              className="uk-navbar-container uk-padding uk-padding-remove-vertical uk-margin-remove"
-              uk-navbar="true"
-            >
-              <div className="uk-navbar-left">
-                <ul className="uk-navbar-nav uk-logo">
-                  <li className="uk-navbar-toggle">
-                    <Link to="/">{metadata.siteMetadata.shortTitle}</Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="uk-navbar-right">
-                <ul className="uk-navbar-nav ">
-                  <li>
-                    <span
-                      className="uk-padding "
-                      uk-navbar-toggle-icon="true"
-                      uk-toggle="target: #sidenav"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-
           <div
             id="sidenav"
             uk-offcanvas="overlay: true"
@@ -64,16 +39,43 @@ class Header extends React.Component {
                   twitter={socialMedia.frontmatter.siteTwitter}
                   instagram={socialMedia.frontmatter.siteInstagram}
                   facebook={socialMedia.frontmatter.siteFacebook}
-                  ratio="1"
                 />
               </ul>
             </div>
+          </div>
+          <div>
+            <nav
+              className="uk-navbar-container uk-padding uk-padding-remove-vertical uk-margin-remove"
+              uk-navbar="true"
+            >
+              <div className="uk-navbar-left">
+                <ul className="uk-navbar-nav uk-logo">
+                  <li className="uk-navbar-toggle">
+                    <Link to="/">{metadata.siteMetadata.shortTitle}</Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="uk-navbar-right">
+                <ul className="uk-navbar-nav ">
+                  <li>
+                    <i
+                      type="button"
+                      className="uk-padding "
+                      uk-toggle="target: #sidenav"
+                    >
+                      <FontAwesomeIcon icon={faBars} />
+                    </i>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
 
         {/* Navbar in big screens */}
         <div className="uk-visible@m">
-          <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+          <div>
             <nav
               className="uk-navbar-container uk-padding uk-padding-remove-vertical uk-margin-remove"
               uk-navbar="true"
