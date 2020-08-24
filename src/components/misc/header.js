@@ -16,36 +16,9 @@ class Header extends React.Component {
       <>
         {/* Navbar in small screens */}
         <div className="uk-hidden@m">
-          <div
-            id="sidenav"
-            uk-offcanvas="overlay: true"
-            className="uk-offcanvas"
-          >
-            <div className="uk-offcanvas-bar">
-              <ul className="uk-nav">
-                {categories.edges.map((category, i) => {
-                  return (
-                    <li key={category.node.frontmatter.categorySlug}>
-                      <Link to={`/${category.node.frontmatter.categorySlug}`}>
-                        {category.node.frontmatter.categoryTitle}
-                      </Link>
-                    </li>
-                  )
-                })}
-                <li>
-                  <Link to="/about">Acerca de</Link>
-                </li>
-                <SocialMediaCard
-                  twitter={socialMedia.frontmatter.siteTwitter}
-                  instagram={socialMedia.frontmatter.siteInstagram}
-                  facebook={socialMedia.frontmatter.siteFacebook}
-                />
-              </ul>
-            </div>
-          </div>
-          <div>
+          <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
             <nav
-              className="uk-navbar-container uk-padding uk-padding-remove-vertical uk-margin-remove"
+              className="uk-navbar-container uk-padding uk-padding-remove-vertical"
               uk-navbar="true"
             >
               <div className="uk-navbar-left">
@@ -117,6 +90,30 @@ class Header extends React.Component {
                 </div>
               </div>
             </nav>
+          </div>
+        </div>
+
+        <div id="sidenav" uk-offcanvas="overlay: false">
+          <div className="uk-offcanvas-bar uk-flex uk-flex-column ">
+            <ul className="uk-nav">
+              {categories.edges.map((category, i) => {
+                return (
+                  <li key={category.node.frontmatter.categorySlug}>
+                    <Link to={`/${category.node.frontmatter.categorySlug}`}>
+                      {category.node.frontmatter.categoryTitle}
+                    </Link>
+                  </li>
+                )
+              })}
+              <li>
+                <Link to="/about">Acerca de</Link>
+              </li>
+              <SocialMediaCard
+                twitter={socialMedia.frontmatter.siteTwitter}
+                instagram={socialMedia.frontmatter.siteInstagram}
+                facebook={socialMedia.frontmatter.siteFacebook}
+              />
+            </ul>
           </div>
         </div>
       </>
