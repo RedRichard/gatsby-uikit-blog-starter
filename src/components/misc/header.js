@@ -93,20 +93,20 @@ class Header extends React.Component {
           </div>
         </div>
 
-        <div id="sidenav" uk-offcanvas="overlay: false">
+        <div id="sidenav" uk-offcanvas="overlay: true;">
           <div className="uk-offcanvas-bar uk-flex uk-flex-column ">
             <ul className="uk-nav">
               {categories.edges.map((category, i) => {
                 return (
                   <li key={category.node.frontmatter.categorySlug}>
-                    <Link to={`/${category.node.frontmatter.categorySlug}`}>
+                    <a href={`/${category.node.frontmatter.categorySlug}`}>
                       {category.node.frontmatter.categoryTitle}
-                    </Link>
+                    </a>
                   </li>
                 )
               })}
               <li>
-                <Link to="/about">Acerca de</Link>
+                <a href="/about">Acerca de</a>
               </li>
               <SocialMediaCard
                 twitter={socialMedia.frontmatter.siteTwitter}
