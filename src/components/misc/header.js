@@ -48,7 +48,7 @@ class Header extends React.Component {
 
         {/* Navbar in big screens */}
         <div className="uk-visible@m">
-          <div>
+          <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
             <nav
               className="uk-navbar-container uk-padding uk-padding-remove-vertical uk-margin-remove"
               uk-navbar="true"
