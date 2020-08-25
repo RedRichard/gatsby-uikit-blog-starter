@@ -30,7 +30,13 @@ collections:
         }
       - { name: postSubtitle, label: subtitle, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
-      - { name: postImage, label: Image, widget: string, required: true }
+      - {
+          name: postImage,
+          label: "Imagen de portada",
+          widget: image,
+          required: true,
+          hint: "Asegúrate de que la imagen no pese más de 1mb para mejorar el rendimiento.",
+        }
       - { name: postDate, label: Date, widget: datetime, required: true }
       - {
           widget: relation,
