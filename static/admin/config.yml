@@ -6,7 +6,7 @@ backend:
   #name: test-repo
   name: github
   repo: RedRichard/letrast-gatsby
-  pbranch: finalTests
+  branch: finalTests
 
 media_folder: static/assets
 public_folder: /assets
