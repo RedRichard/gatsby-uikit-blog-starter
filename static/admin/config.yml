@@ -4,7 +4,7 @@ backend:
   #name: github
   #repo: RedRichard/letrast-gatsby
   #name: test-repo
-  # name: github
+  name: github
   repo: RedRichard/letrast-gatsby
   pbranch: finalTests
 

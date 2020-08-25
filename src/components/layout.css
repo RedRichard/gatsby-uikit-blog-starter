@@ -1,6 +1,7 @@
 @font-face {
   font-family: Sifonn;
   src: url("../../static/fonts/sifonn/SIFONN_PRO.otf");
+  font-display: swap;
 }
 
 .uk-navbar-container {
