@@ -2,7 +2,7 @@
 postTitle: Pellentesque in eleifend
 postSlug: pellentesque-in-eleifend
 postSubtitle: Pellentesque in eleifend sem, sit amet fringilla mi.
-postImage: https://cdn.pixabay.com/photo/2020/07/14/14/40/palm-field-5404428_1280.jpg
+postImage: /assets/markus-winkler-yf6e_jbl4ow-unsplash.jpg
 postDate: 2020-08-16T04:48:56.344Z
 postAuthor: autor-uno
 postCategory: ensayos
