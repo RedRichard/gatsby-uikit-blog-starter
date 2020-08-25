@@ -1,7 +1,7 @@
 ---
 authorName: Autor 1
 authorSlug: autor-uno
-authorImage: /assets/tom-morbey-bievrp3zqqo-unsplash.jpg
+authorImage: /assets/jonathan-farber-h6to-mmm_-u-unsplash.jpg
 authorTwitter: RedGomric
 authorInstagram: ""
 authorFacebook: ""
