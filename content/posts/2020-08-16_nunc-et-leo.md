@@ -2,11 +2,11 @@
 postTitle: Nunc et leo
 postSlug: nunc-et-leo
 postSubtitle: Nunc et leo interdum, vulputate leo tincidunt, pretium erat.
-postImage: https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg
 postDate: 2020-08-05T04:50:14.606Z
 postAuthor: autor-dos
 postCategory: ensayos
 ---
+
 <!--StartFragment-->
 
 In eget diam eu neque maximus dignissim eget vel ex. Fusce sit amet nibh neque. Mauris euismod ullamcorper ex. Aliquam at lorem a odio laoreet iaculis. Duis tincidunt pharetra feugiat. Maecenas tellus sapien, imperdiet in urna eget, lacinia ultrices magna. Nullam velit dolor, hendrerit sit amet sodales vulputate, scelerisque eget justo. Sed sed sollicitudin nunc. Sed lacinia vitae odio id facilisis. Donec eleifend augue enim, quis sodales dolor commodo a. Aliquam dictum nunc vel magna facilisis lacinia. Nulla tincidunt ultricies turpis, non dapibus magna. Phasellus pulvinar ac augue in tristique. Pellentesque velit ipsum, accumsan nec condimentum nec, finibus non enim. Suspendisse tincidunt sollicitudin ipsum, id volutpat tellus ornare sed. Donec vel ultrices lorem.

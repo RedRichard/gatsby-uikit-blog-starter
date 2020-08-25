@@ -2,11 +2,11 @@
 postTitle: Pellentesque in eleifend
 postSlug: pellentesque-in-eleifend
 postSubtitle: Pellentesque in eleifend sem, sit amet fringilla mi.
-postImage: https://cdn.pixabay.com/photo/2020/07/14/14/40/palm-field-5404428_1280.jpg
 postDate: 2020-08-16T04:48:56.344Z
 postAuthor: autor-uno
 postCategory: ensayos
 ---
+
 <!--StartFragment-->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ligula urna, auctor eu nunc non, faucibus pharetra urna. Vivamus sit amet libero at nulla ultrices interdum. Sed vel porttitor nisl. Sed fermentum nunc ut placerat consectetur. Ut rutrum rutrum metus sit amet ultrices. Etiam ut felis nulla. Donec velit mi, vestibulum id quam luctus, volutpat faucibus velit. Phasellus consequat sodales elit, ac fermentum risus vestibulum vel. In dictum urna vel pellentesque mollis. Nunc vel ullamcorper lacus. Donec sollicitudin, odio vitae sodales sagittis, metus lorem tincidunt ligula, eget facilisis mauris augue sit amet ex. Suspendisse dapibus velit volutpat neque porttitor convallis.
