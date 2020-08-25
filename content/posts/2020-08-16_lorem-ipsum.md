@@ -2,11 +2,11 @@
 postTitle: Lorem Ipsum
 postSlug: lorem-ipsum
 postSubtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-postImage: /assets/camille-brodard-kmile-feminine-creative-designer-ygxagvfjfhc-unsplash.jpg
 postDate: 2020-08-01T04:41:48.939Z
 postAuthor: autor-uno
 postCategory: ensayos
 ---
+
 <!--StartFragment-->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ligula urna, auctor eu nunc non, faucibus pharetra urna. Vivamus sit amet libero at nulla ultrices interdum. Sed vel porttitor nisl. Sed fermentum nunc ut placerat consectetur. Ut rutrum rutrum metus sit amet ultrices. Etiam ut felis nulla. Donec velit mi, vestibulum id quam luctus, volutpat faucibus velit. Phasellus consequat sodales elit, ac fermentum risus vestibulum vel. In dictum urna vel pellentesque mollis. Nunc vel ullamcorper lacus. Donec sollicitudin, odio vitae sodales sagittis, metus lorem tincidunt ligula, eget facilisis mauris augue sit amet ex. Suspendisse dapibus velit volutpat neque porttitor convallis.

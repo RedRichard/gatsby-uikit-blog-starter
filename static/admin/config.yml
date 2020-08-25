@@ -1,12 +1,12 @@
 backend:
-  name: git-gateway
-  branch: master
+  #name: git-gateway
+  #branch: master
   #name: github
   #repo: RedRichard/letrast-gatsby
   #name: test-repo
-  # name: github
-  # repo: RedRichard/letrast-gatsby
-  # branch: testing
+  name: github
+  repo: RedRichard/letrast-gatsby
+  branch: finalTests
 
 media_folder: static/assets
 public_folder: /assets
@@ -30,7 +30,12 @@ collections:
         }
       - { name: postSubtitle, label: subtitle, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
-      - { name: postImage, label: Image, widget: string, required: true }
+      - {
+          name: postImage,
+          label: "Imagen principal",
+          widget: image,
+          required: true,
+        }
       - { name: postDate, label: Date, widget: datetime, required: true }
       - {
           widget: relation,

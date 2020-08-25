@@ -2,11 +2,11 @@
 postTitle: "Quisque ullamcorper "
 postSlug: quisque-ullamcorper
 postSubtitle: Quisque ullamcorper leo turpis, ac varius magna volutpat eget.
-postImage: /assets/tom-morbey-h-hjeixezxq-unsplash.jpg
 postDate: 2020-08-04T04:47:55.512Z
 postAuthor: autor-dos
 postCategory: articulos
 ---
+
 <!--StartFragment-->
 
 In eget diam eu neque maximus dignissim eget vel ex. Fusce sit amet nibh neque. Mauris euismod ullamcorper ex. Aliquam at lorem a odio laoreet iaculis. Duis tincidunt pharetra feugiat. Maecenas tellus sapien, imperdiet in urna eget, lacinia ultrices magna. Nullam velit dolor, hendrerit sit amet sodales vulputate, scelerisque eget justo. Sed sed sollicitudin nunc. Sed lacinia vitae odio id facilisis. Donec eleifend augue enim, quis sodales dolor commodo a. Aliquam dictum nunc vel magna facilisis lacinia. Nulla tincidunt ultricies turpis, non dapibus magna. Phasellus pulvinar ac augue in tristique. Pellentesque velit ipsum, accumsan nec condimentum nec, finibus non enim. Suspendisse tincidunt sollicitudin ipsum, id volutpat tellus ornare sed. Donec vel ultrices lorem.
