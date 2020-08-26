@@ -41,7 +41,13 @@ export const pageQuery = graphql`
           frontmatter {
             postSlug
             postTitle
-            postImage
+            postImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             postDate
             postCategory
             postAuthor

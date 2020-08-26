@@ -156,7 +156,7 @@ collections:
         fields:
           - { name: aboutTitle, label: Title, required: true }
           - { name: body, label: Body, widget: markdown, required: true }
-          - { name: aboutImage, label: Image, widget: string, required: true }
+          - { name: aboutImage, label: Image, widget: image, required: true }
 
       - label: "Social Media"
         name: "social"

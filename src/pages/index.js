@@ -28,7 +28,13 @@ const IndexPage = () => (
                   postTitle
                   postSubtitle
                   postSlug
-                  postImage
+                  postImage {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                   postCategory
                   postDate
                 }
@@ -46,7 +52,13 @@ const IndexPage = () => (
                   postTitle
                   postSubtitle
                   postSlug
-                  postImage
+                  postImage {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                   postCategory
                   postDate
                 }

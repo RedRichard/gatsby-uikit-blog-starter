@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import SocialMediaCard from "../socialMedia/socialMediaBanner"
 
@@ -7,13 +8,10 @@ export default function authorCard({ author }) {
   return (
     <div uk-grid="true">
       <div className="uk-width-1-5">
-        <img
+        <Img
           className="uk-border-pill"
-          src={author.frontmatter.authorImage}
-          alt={author.frontmatter.authorImage}
-          width="200"
-          height="200"
-        ></img>
+          fluid={author.frontmatter.authorImage.childImageSharp.fluid}
+        />
       </div>
       <div className="uk-text-justify uk-width-expand">
         <div>

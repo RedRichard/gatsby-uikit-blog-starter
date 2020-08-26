@@ -18,7 +18,7 @@ export default function Category({ data }) {
         <div className="uk-container uk-container-large uk-padding-remove-horizontal">
           <div
             className="uk-height-medium uk-flex uk-flex-left uk-flex-middle uk-background-cover uk-light"
-            data-srcset={post.frontmatter.aboutImage}
+            data-srcset={post.frontmatter.postImage.childImageSharp.fluid}
             uk-img="true"
           >
             <div className="main-background-image uk-padding">
@@ -57,7 +57,13 @@ export const pageQuery = graphql`
   query AboutPost {
     post: markdownRemark(frontmatter: { aboutTitle: { ne: null } }) {
       frontmatter {
-        aboutImage
+        aboutImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         aboutTitle
       }
       html
@@ -83,7 +89,6 @@ export const pageQuery = graphql`
             postDate(formatString: "DD-MM-YYYY")
             postTitle
             postSubtitle
-            postImage
           }
         }
       }

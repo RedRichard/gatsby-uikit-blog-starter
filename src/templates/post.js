@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import PostList from "../components/posts/recentPostList"
 import AuthorCard from "../components/cards/authorCard"
 import Disqus from "../components/comments/disqus"
+import Img from "gatsby-image"
 
 export default function Category({ data }) {
   const post = data.post
@@ -19,7 +20,7 @@ export default function Category({ data }) {
         <div className="uk-container uk-container-large uk-padding-remove-horizontal">
           <div
             className="uk-height-medium uk-flex uk-flex-left uk-flex-middle uk-background-cover uk-light"
-            data-srcset={post.frontmatter.postImage}
+            data-srcset={post.frontmatter.postImage.childImageSharp.fluid}
             uk-img="true"
           >
             <div className="main-background-image uk-padding">
@@ -60,7 +61,13 @@ export const pageQuery = graphql`
       frontmatter {
         postTitle
         postSlug
-        postImage
+        postImage {
+          childImageSharp {
+            fluid(quality: 80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         postDate(formatString: "DD-MM-YYYY")
         postAuthor
         postCategory
@@ -75,7 +82,13 @@ export const pageQuery = graphql`
         authorTwitter
         authorFacebook
         authorInstagram
-        authorImage
+        authorImage {
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       html
     }
@@ -93,7 +106,6 @@ export const pageQuery = graphql`
             postDate(formatString: "DD-MM-YYYY")
             postTitle
             postSubtitle
-            postImage
           }
         }
       }
