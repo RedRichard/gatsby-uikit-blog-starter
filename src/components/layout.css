@@ -64,7 +64,6 @@
 
 .post-title-banner {
   font-family: Sifonn;
-  font-size: 5vw;
   color: #000000;
   font-weight: 400;
   text-decoration: none;
@@ -72,4 +71,20 @@
   font-variant: small-caps;
   text-transform: capitalize;
   text-shadow: rgb(0, 0, 0) -2px 3px 9px;
+}
+
+/* Container holding the image and the text */
+.main-post-image {
+  position: relative !important;
+  text-align: left !important;
+  object-fit: cover !important;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
