@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import PostList from "../components/posts/recentPostList"
 import SocialMedia from "../components/socialMedia/socialMediaBanner"
 
+import Img from "gatsby-image"
+
 export default function Category({ data }) {
   const post = data.post
   const relatedPosts = data.related
@@ -15,17 +17,16 @@ export default function Category({ data }) {
     <Layout>
       <SEO title={post.frontmatter.aboutTitle} />
       <div className="uk-section uk-padding-remove">
-        <div className="uk-container uk-container-large uk-padding-remove-horizontal">
-          <div
-            className="uk-height-medium uk-flex uk-flex-left uk-flex-middle uk-background-cover uk-light"
-            data-srcset={post.frontmatter.aboutImage}
-            uk-img="true"
-          >
-            <div className="main-background-image uk-padding">
-              <h1 className="uk-text-normal uk-text-uppercase">
-                {post.frontmatter.aboutTitle}
-              </h1>
-            </div>
+        <div class="uk-light uk-cover-container uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
+          <div uk-cover="true">
+            <Img fluid={post.frontmatter.aboutImage.childImageSharp.fluid} />
+          </div>
+          <div className="centered main-background-image uk-padding">
+            <h1 className="uk-text-normal uk-text-uppercase post-title-banner ">
+              {post.frontmatter.aboutTitle
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")}
+            </h1>
           </div>
         </div>
       </div>
@@ -57,7 +58,13 @@ export const pageQuery = graphql`
   query AboutPost {
     post: markdownRemark(frontmatter: { aboutTitle: { ne: null } }) {
       frontmatter {
-        aboutImage
+        aboutImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         aboutTitle
       }
       html
@@ -83,7 +90,6 @@ export const pageQuery = graphql`
             postDate(formatString: "DD-MM-YYYY")
             postTitle
             postSubtitle
-            postImage
           }
         }
       }

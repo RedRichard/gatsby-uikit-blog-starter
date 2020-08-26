@@ -1,6 +1,6 @@
 ---
 aboutTitle: Acerca de
-aboutImage: https://cdn.pixabay.com/photo/2020/04/27/17/42/sand-5100918_1280.jpg
+aboutImage: /assets/markus-winkler-yf6e_jbl4ow-unsplash.jpg
 ---
 <!--StartFragment-->
 

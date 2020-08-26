@@ -2,6 +2,7 @@
 postTitle: Maecenas tellus
 postSlug: maecenas-tellus
 postSubtitle: Maecenas tellus sapien, imperdiet in urna eget, lacinia ultrices magna.
+postImage: /assets/daniela-beleva-2qdf11kllas-unsplash.jpg
 postDate: 2020-08-08T04:52:16.503Z
 postAuthor: autor-uno
 postCategory: ensayos

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 const postMainCard = ({ article }) => {
   return (
@@ -9,11 +10,12 @@ const postMainCard = ({ article }) => {
     >
       <div className="uk-card uk-card-default">
         <div className="uk-card-media-top uk-cover-container uk-height-medium img-hover-zoom">
-          <img
-            src={article.node.frontmatter.postImage}
-            alt={article.node.frontmatter.postImage}
-            uk-cover="true"
-          />
+          <div uk-cover="true">
+            <Img
+              fluid={article.node.frontmatter.postImage.childImageSharp.fluid}
+              uk-cover="true"
+            />
+          </div>
         </div>
         <div className="uk-card-body uk-card-small">
           <h3 className="uk-card-title">
@@ -23,7 +25,6 @@ const postMainCard = ({ article }) => {
         </div>
       </div>
     </Link>
-    // </div>
   )
 }
 

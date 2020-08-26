@@ -1,12 +1,12 @@
 backend:
-  #name: git-gateway
-  #branch: master
+  name: git-gateway
+  branch: master
   #name: github
   #repo: RedRichard/letrast-gatsby
   #name: test-repo
-  name: github
-  repo: RedRichard/letrast-gatsby
-  branch: performanceImprovements
+  # name: github
+  # repo: RedRichard/letrast-gatsby
+  # branch: gatsby-image-tests
 
 media_folder: static/assets
 public_folder: /assets
@@ -32,9 +32,16 @@ collections:
       - { name: body, label: Body, widget: markdown, required: true }
       - {
           name: postImage,
+<<<<<<< HEAD
           label: "Imagen principal",
           widget: image,
           required: true,
+=======
+          label: "Imagen de portada",
+          widget: image,
+          required: true,
+          hint: "Asegúrate de que la imagen no pese más de 1mb para mejorar el rendimiento.",
+>>>>>>> gatsby-image-tests
         }
       - { name: postDate, label: Date, widget: datetime, required: true }
       - {
@@ -155,7 +162,7 @@ collections:
         fields:
           - { name: aboutTitle, label: Title, required: true }
           - { name: body, label: Body, widget: markdown, required: true }
-          - { name: aboutImage, label: Image, widget: string, required: true }
+          - { name: aboutImage, label: Image, widget: image, required: true }
 
       - label: "Social Media"
         name: "social"

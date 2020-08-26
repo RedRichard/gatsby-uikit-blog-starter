@@ -28,7 +28,13 @@ const IndexPage = () => (
                   postTitle
                   postSubtitle
                   postSlug
-                  postImage
+                  postImage {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                   postCategory
                   postDate
                 }
@@ -39,6 +45,7 @@ const IndexPage = () => (
             filter: { frontmatter: { postTitle: { nin: [null] } } }
             sort: { fields: frontmatter___postDate, order: DESC }
             skip: 2
+            limit: 30
           ) {
             edges {
               node {
@@ -46,7 +53,13 @@ const IndexPage = () => (
                   postTitle
                   postSubtitle
                   postSlug
-                  postImage
+                  postImage {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                   postCategory
                   postDate
                 }

@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import PostList from "../components/posts/recentPostList"
 import AuthorCard from "../components/cards/authorCard"
 import Disqus from "../components/comments/disqus"
+import Img from "gatsby-image"
 
 export default function Category({ data }) {
   const post = data.post
@@ -16,20 +17,19 @@ export default function Category({ data }) {
     <Layout>
       <SEO title={post.frontmatter.postTitle} />
       <div className="uk-section uk-padding-remove">
-        <div className="uk-container uk-container-large uk-padding-remove-horizontal">
-          <div
-            className="uk-height-medium uk-flex uk-flex-left uk-flex-middle uk-background-cover uk-light"
-            data-srcset={post.frontmatter.postImage}
-            uk-img="true"
-          >
-            <div className="main-background-image uk-padding">
-              <h1 className="uk-text-normal uk-text-uppercase post-title-banner">
-                {post.frontmatter.postTitle
-                  .normalize("NFD")
-                  .replace(/[\u0300-\u036f]/g, "")}
-              </h1>
-              <h2 className="uk-text-lead">{post.frontmatter.postSubtitle}</h2>
-            </div>
+        <div class="uk-light uk-cover-container uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle">
+          <div uk-cover="true">
+            <Img fluid={post.frontmatter.postImage.childImageSharp.fluid} />
+          </div>
+          <div className="centered main-background-image uk-padding">
+            <h1 className="uk-text-normal uk-text-uppercase post-title-banner ">
+              {post.frontmatter.postTitle
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")}
+            </h1>
+            <h2 className="uk-text-lead post-subtitle-banner">
+              {post.frontmatter.postSubtitle}
+            </h2>
           </div>
         </div>
       </div>
@@ -60,7 +60,13 @@ export const pageQuery = graphql`
       frontmatter {
         postTitle
         postSlug
-        postImage
+        postImage {
+          childImageSharp {
+            fluid(quality: 80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         postDate(formatString: "DD-MM-YYYY")
         postAuthor
         postCategory
@@ -75,7 +81,13 @@ export const pageQuery = graphql`
         authorTwitter
         authorFacebook
         authorInstagram
-        authorImage
+        authorImage {
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       html
     }
@@ -93,7 +105,6 @@ export const pageQuery = graphql`
             postDate(formatString: "DD-MM-YYYY")
             postTitle
             postSubtitle
-            postImage
           }
         }
       }
