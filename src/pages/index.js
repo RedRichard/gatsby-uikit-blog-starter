@@ -45,6 +45,7 @@ const IndexPage = () => (
             filter: { frontmatter: { postTitle: { nin: [null] } } }
             sort: { fields: frontmatter___postDate, order: DESC }
             skip: 2
+            limit: 30
           ) {
             edges {
               node {

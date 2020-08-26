@@ -16,11 +16,6 @@ const postMainCard = ({ article }) => {
               uk-cover="true"
             />
           </div>
-          {/* <img
-            src={article.node.frontmatter.postImage.mobile.fluid}
-            alt={article.node.frontmatter.postImage.mobile.fluid}
-            uk-cover="true"
-          /> */}
         </div>
         <div className="uk-card-body uk-card-small">
           <h3 className="uk-card-title">
