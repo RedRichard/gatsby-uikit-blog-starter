@@ -5,7 +5,7 @@ You can customize as much as you want, or use it as is to publish your thoughts.
 
 ## Start now and deploy to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RedRichard/gatsby-uikit-blog-starter.git)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RedRichard/gatsby-uikit-blog-starter)
 
 ## Main Site
 
