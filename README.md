@@ -3,6 +3,10 @@
 A starter to create a blog quickly, ready to be populated easily, from Netlify CMS.
 You can customize as much as you want, or use it as is to publish your thoughts.
 
+## Start now and deploy to Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RedRichard/gatsby-uikit-blog-starter.git)
+
 ## Main Site
 
 <img src="https://github.com/RedRichard/gatsby-uikit-blog-starter/blob/master/static/assets/MainPage.png" width="600"/>
