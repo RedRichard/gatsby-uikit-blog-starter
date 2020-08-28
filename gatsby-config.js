@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `UIkit Blog Starter`,
-    shortTitle: `Blog`,
+    shortTitle: `Blog name`,
     description: `A blog starter with Netlify CMS`,
     author: `@UIkitBlog`,
   },

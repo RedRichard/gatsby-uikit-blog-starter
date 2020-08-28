@@ -4,8 +4,8 @@ postSlug: quisque-ullamcorper
 postSubtitle: Quisque ullamcorper leo turpis, ac varius magna volutpat eget.
 postImage: /assets/tom-morbey-h-hjeixezxq-unsplash.jpg
 postDate: 2020-08-04T04:47:55.512Z
-postAuthor: autor-dos
-postCategory: articulos
+postAuthor: author-two
+postCategory: articles
 ---
 
 <!--StartFragment-->

@@ -4,8 +4,8 @@ postSlug: pellentesque-in-eleifend
 postSubtitle: Pellentesque in eleifend sem, sit amet fringilla mi.
 postImage: /assets/markus-winkler-yf6e_jbl4ow-unsplash.jpg
 postDate: 2020-08-16T04:48:56.344Z
-postAuthor: autor-uno
-postCategory: ensayos
+postAuthor: author-one
+postCategory: essays
 ---
 
 <!--StartFragment-->

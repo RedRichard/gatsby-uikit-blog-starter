@@ -1,5 +1,5 @@
 ---
-aboutTitle: Acerca de
+aboutTitle: About
 aboutImage: /assets/markus-winkler-yf6e_jbl4ow-unsplash.jpg
 ---
 <!--StartFragment-->

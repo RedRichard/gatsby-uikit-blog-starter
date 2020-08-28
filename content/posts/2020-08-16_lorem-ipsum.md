@@ -4,8 +4,8 @@ postSlug: lorem-ipsum
 postSubtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 postImage: /assets/camille-brodard-kmile-feminine-creative-designer-ygxagvfjfhc-unsplash.jpg
 postDate: 2020-08-01T04:41:48.939Z
-postAuthor: autor-uno
-postCategory: ensayos
+postAuthor: author-one
+postCategory: essays
 ---
 
 <!--StartFragment-->

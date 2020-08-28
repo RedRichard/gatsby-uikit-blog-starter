@@ -106,7 +106,7 @@ class Header extends React.Component {
                 )
               })}
               <li>
-                <a href="/about">Acerca de</a>
+                <a href="/about">About</a>
               </li>
               <SocialMediaCard
                 twitter={socialMedia.frontmatter.siteTwitter}
