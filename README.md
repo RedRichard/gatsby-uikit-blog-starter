@@ -5,6 +5,8 @@ You can customize as much as you want, or use it as is to publish your thoughts.
 
 ## Main Site
 
+<img src="https://github.com/RedRichard/gatsby-uikit-blog-starter/blob/master/static/assets/MainPage.png" width="600"/>
+
 ## How to set up
 
 - Clone the repository
