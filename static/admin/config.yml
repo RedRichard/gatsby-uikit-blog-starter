@@ -2,11 +2,7 @@ backend:
   # For Netlify Identity:
   # name: git-gateway
   # branch: master
-  #name: github
-  #repo: RedRichard/letrast-gatsby
-  #name: test-repo
-  # name: github
-  repo: RedRichard/gatsby-uikit-blog-starter
+  repo: your-username/your-repository-name
   branch: master
 
 media_folder: static/assets
