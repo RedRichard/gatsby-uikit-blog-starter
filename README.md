@@ -11,13 +11,13 @@ You can customize as much as you want, or use it as is to publish your thoughts.
 
 - Clone the repository
 
-  git clone https://github.com/RedRichard/gatsby-uikit-blog-starter.git
+    git clone https://github.com/RedRichard/gatsby-uikit-blog-starter.git
 
 - Enter the repository
 
 - Run the develop server
 
-  gatsby develop
+    gatsby develop
 
 - Open **gatsby-config.js** and write your blog data.
 
@@ -27,6 +27,6 @@ You can customize as much as you want, or use it as is to publish your thoughts.
 
 - Start editing entries and global config from Netlify CMS:
 
-  localhost:8000/admin
+    localhost:8000/admin
 
 - Deploy to Netlify
