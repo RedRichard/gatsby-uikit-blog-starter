@@ -12,16 +12,14 @@ class Footer extends React.Component {
         <div className="uk-container">
           <footer>
             <div className="uk-grid uk-padding uk-padding-remove-vertical">
-              Nuestras redes sociales:{" "}
+              Social Media:{" "}
               <SocialMediaCard
                 twitter={socialMedia.frontmatter.siteTwitter}
                 instagram={socialMedia.frontmatter.siteInstagram}
                 facebook={socialMedia.frontmatter.siteFacebook}
               />
             </div>
-            <div>
-              © {new Date().getFullYear()}, todos los derechos reservados.
-            </div>
+            <div>© {new Date().getFullYear()}</div>
           </footer>
         </div>
       </div>

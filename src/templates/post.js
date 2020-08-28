@@ -44,7 +44,7 @@ export default function Category({ data }) {
               <Disqus post={post} />
             </div>
             <div className="uk-text-justify uk-width-expand@m">
-              <p className="uk-text-lead">Publicaciones recientes</p>
+              <p className="uk-text-lead">Recent</p>
               <PostList posts={relatedPosts.edges} />
             </div>
           </div>

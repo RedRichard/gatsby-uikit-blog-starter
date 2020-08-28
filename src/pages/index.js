@@ -6,13 +6,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostList from "../components/posts/indexPostList"
 
-import TitleBanner from "../components/misc/nameBanner"
+import TitleBanner from "../components/misc/pageTitleBanner"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-
-    <TitleBanner />
 
     <StaticQuery
       query={graphql`
@@ -66,10 +64,16 @@ const IndexPage = () => (
               }
             }
           }
+          metadata: site {
+            siteMetadata {
+              title
+            }
+          }
         }
       `}
       render={data => (
         <>
+          <TitleBanner title={data.metadata.siteMetadata.title} />
           <div className="uk-section uk-padding-small">
             <div className="uk-container uk-container-large">
               <PostList

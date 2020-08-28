@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Letras Transformadoras`,
-    shortTitle: `Letras T`,
-    description: `Una colección de ensayos...`,
-    author: `@letrastransformadoras`,
+    title: `UIkit Blog Starter`,
+    shortTitle: `Blog`,
+    description: `A blog starter with Netlify CMS`,
+    author: `@UIkitBlog`,
   },
   plugins: [
     {

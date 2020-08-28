@@ -1,12 +1,13 @@
 backend:
-  name: git-gateway
-  branch: master
+  # For Netlify Identity:
+  # name: git-gateway
+  # branch: master
   #name: github
   #repo: RedRichard/letrast-gatsby
   #name: test-repo
   # name: github
-  # repo: RedRichard/letrast-gatsby
-  # branch: gatsby-image-tests
+  repo: RedRichard/gatsby-uikit-blog-starter
+  branch: master
 
 media_folder: static/assets
 public_folder: /assets
@@ -23,31 +24,24 @@ collections:
       - {
           name: postSlug,
           label: Slug,
-          hint: "Sólo minúsculas y guiones en lugar de espacios",
+          hint: "Only lowercase letters and dashes",
           required: true,
-          pattern:
-            ['^[a-z\-]+$', "Sólo minúsculas y guiones en lugar de espacios"],
+          pattern: ['^[a-z\-]+$', "Only lowercase letters and dashes"],
         }
       - { name: postSubtitle, label: subtitle, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
       - {
           name: postImage,
-<<<<<<< HEAD
-          label: "Imagen principal",
+          label: "Main image",
           widget: image,
           required: true,
-=======
-          label: "Imagen de portada",
-          widget: image,
-          required: true,
-          hint: "Asegúrate de que la imagen no pese más de 1mb para mejorar el rendimiento.",
->>>>>>> gatsby-image-tests
+          hint: "Images of less than 1mb improve performance",
         }
       - { name: postDate, label: Date, widget: datetime, required: true }
       - {
           widget: relation,
           name: postAuthor,
-          label: Autor,
+          label: Author,
           collection: "author",
           valueField: "authorSlug",
           required: true,
@@ -57,7 +51,7 @@ collections:
       - {
           widget: relation,
           name: postCategory,
-          label: Categoría,
+          label: Category,
           collection: category,
           valueField: categorySlug,
           required: true,
@@ -77,10 +71,9 @@ collections:
       - {
           name: categorySlug,
           label: Slug,
-          hint: "Sólo minúsculas y guiones en lugar de espacios",
+          hint: "Only lowercase letters and dashes",
           required: true,
-          pattern:
-            ['^[a-z\-]+$', "Sólo minúsculas y guiones en lugar de espacios"],
+          pattern: ['^[a-z\-]+$', "Only lowercase letters and dashes"],
         }
       - {
           widget: relation,
@@ -105,15 +98,14 @@ collections:
       - {
           name: authorSlug,
           label: Slug,
-          hint: "Sólo minúsculas y guiones en lugar de espacios",
+          hint: "Only lowercase letters and dashes",
           required: true,
-          pattern:
-            ['^[a-z\-]+$', "Sólo minúsculas y guiones en lugar de espacios"],
+          pattern: ['^[a-z\-]+$', "Only lowercase letters and dashes"],
         }
       - { name: body, label: Bio, widget: string, required: true }
       - {
           name: authorImage,
-          label: "Imagen de perfil",
+          label: "Profile picture",
           widget: image,
           required: true,
         }
@@ -122,7 +114,7 @@ collections:
           label: "Twitter",
           widget: string,
           required: false,
-          hint: "Sólo el nombre de usuario, sin el @",
+          hint: "Handler",
           default: "",
         }
       - {
@@ -130,7 +122,7 @@ collections:
           label: "Instagram",
           widget: string,
           required: false,
-          hint: "Sólo el nombre de usuario",
+          hint: "Username",
           default: "",
         }
       - {
@@ -138,7 +130,7 @@ collections:
           label: "Facebook",
           widget: string,
           required: false,
-          hint: "Sólo el nombre de usuario",
+          hint: "Username",
           default: "",
         }
       - {
@@ -153,10 +145,10 @@ collections:
           displayFields: ["postSlug"],
         }
 
-  - label: "Configuración Global"
+  - label: "Global Config"
     name: "pages"
     files:
-      - label: "Acerca de"
+      - label: "About"
         name: "about"
         file: "content/config/aboutPage.md"
         fields:
@@ -173,7 +165,7 @@ collections:
               label: "Twitter",
               widget: string,
               required: false,
-              hint: "Sólo el nombre de usuario, sin el @",
+              hint: "Handler",
               default: "",
             }
           - {
@@ -181,7 +173,7 @@ collections:
               label: "Instagram",
               widget: string,
               required: false,
-              hint: "Sólo el nombre de usuario",
+              hint: "Username",
               default: "",
             }
           - {
@@ -189,6 +181,6 @@ collections:
               label: "Facebook",
               widget: string,
               required: false,
-              hint: "Sólo el nombre de usuario",
+              hint: "Username",
               default: "",
             }

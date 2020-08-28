@@ -5,7 +5,7 @@
 }
 
 .uk-navbar-container {
-  background-color: #14110f !important;
+  background-color: black !important;
   color: white;
 }
 
@@ -41,14 +41,6 @@
   font-variant: small-caps;
   text-transform: uppercase;
   text-shadow: rgb(0, 0, 0) -2px 3px 9px;
-}
-
-.name-banner .name-banner-color1 {
-  color: #55cdfc;
-}
-
-.name-banner .name-banner-color2 {
-  color: #f7a8b8;
 }
 
 .page-title-banner {
