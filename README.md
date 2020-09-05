@@ -21,7 +21,7 @@ You can customize as much as you want, or use it as is to publish your thoughts.
 
 - Enter the repository
 
-- Run the develop server
+- Run the development server
 
         gatsby develop
 
