@@ -12,7 +12,7 @@ export default function AuthorPosts({ data }) {
 
   return (
     <Layout>
-      <SEO title="category" />
+      <SEO title={author.frontmatter.authorName} />
       <NameBanner
         title={author.frontmatter.authorName
           .normalize("NFD")

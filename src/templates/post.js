@@ -55,7 +55,7 @@ export default function Category({ data }) {
 }
 
 export const pageQuery = graphql`
-  query Post($id: String!) {
+  query Post($id: String!, $authorSlug: String!) {
     post: markdownRemark(frontmatter: { postSlug: { eq: $id } }) {
       frontmatter {
         postTitle
@@ -74,7 +74,7 @@ export const pageQuery = graphql`
       }
       html
     }
-    author: markdownRemark(frontmatter: { posts: { in: [$id] } }) {
+    author: markdownRemark(frontmatter: { authorSlug: { eq: $authorSlug } }) {
       frontmatter {
         authorName
         authorSlug

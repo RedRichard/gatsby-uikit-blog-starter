@@ -18,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
               frontmatter {
                 postSlug
                 postCategory
+                postAuthor
               }
             }
           }
@@ -84,6 +85,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve("./src/templates/post.js"),
       context: {
         id: post.node.frontmatter.postSlug,
+        authorSlug: post.node.frontmatter.postAuthor,
       },
     })
   })
